@@ -257,7 +257,7 @@ input[type="checkbox"].orangeCheckbox:checked:hover::before{
     gap: 15px;
 	padding: 10px;
 	
-	max-height: 300px;
+	max-height: 200px;
 	overflow-y: auto;
 	overflow-x: hidden;
 }
@@ -307,4 +307,22 @@ input[type="checkbox"].orangeCheckbox:checked:hover::before{
 #balances{
 	width: 90%;
 	margin: 30px auto;
+}
+
+#githubImage{
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+
+#shareButton{
+	position: fixed;
+	top: 60px;
+	right: 10px;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
 }
