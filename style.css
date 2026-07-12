@@ -1,0 +1,310 @@
+body{
+	font-family: Arial, sans-serif;
+	margin: 20px;
+	padding: 5px;
+	text-align: center;
+	background-color: #161616;
+	color: white;
+}
+
+.orangeTitle{
+	color: #AA5C29;
+}
+
+.orangeDiv{
+	padding: 10px;
+	color: white;
+	background-color: #222;
+	border: 2px solid #565656;
+	border-radius: 10px;
+}
+
+.orangeInput{
+	padding: 10px;
+	color: white;
+	background-color: #333;
+	border: 2px solid #565656;
+	border-radius: 10px;
+	outline: 2px solid transparent;
+	resize: none;
+	transition: background-color 0.2s ease, border-color 0.2s ease, outline 0.2s ease;
+}
+.orangeInput:hover{
+	background-color: #565656;
+	cursor: text;
+	border: 2px solid #828282;
+}
+.orangeInput:focus{
+	outline: 2px solid #BBBBBB;
+}
+
+input[type="number"].orangeInput::-webkit-inner-spin-button,
+input[type="number"].orangeInput::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+}
+input[type="number"].orangeInput{
+    appearance: textfield;
+}
+
+.orangeScrollable::-webkit-scrollbar{
+	width: 10px;
+	height: 12px;
+}
+.orangeScrollable::-webkit-scrollbar-thumb {
+	background-color: #875330; /* Thumb color */
+	border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+	border: 3px solid #161616; /* Border around the thumb to create separation */
+	transition: background-color 0.2s ease;
+}
+.orangeScrollable::-webkit-scrollbar-track {
+	background: transparent; /* Background of the track */
+	border-radius: 10px; /* Rounded corners for the track */
+}
+.orangeScrollable::-webkit-scrollbar-thumb:hover {
+	background-color: #AA5C29; /* Change color when hovered */
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.orangeButton{
+	padding: 10px;
+	margin-top: 20px;
+	width: 30%;
+	min-width: 100px;
+	color: white;
+	background-color: #875330;
+	border: 2px solid #753F1C;
+	border-radius: 10px;
+	transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.orangeButton:hover{
+	background-color: #AA5C29;
+	cursor: pointer;
+	border: 2px solid #843D11;
+}
+
+.orangeSmallButton{
+	width: 40px;
+    height: 40px;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 10px;
+	color: white;
+	background-color: #333;
+	border: 2px solid #565656;
+	transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.orangeSmallButton:hover{
+	background-color: #565656;
+	cursor: pointer;
+	border: 2px solid #828282;
+}
+
+input[type="checkbox"].orangeCheckbox {
+	appearance: none; /* Removes default styling */
+	width: 45px;
+	height: 20px;
+	background-color: #333;
+	border: 2px solid #565656;
+	cursor: pointer;
+	position: relative;
+	border-radius: 5px;
+	transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+input[type="checkbox"].orangeCheckbox:hover{
+	background-color: #565656;
+	border-color: #828282;
+}
+input[type="checkbox"].orangeCheckbox:checked {
+	background-color: #875330;
+	border-color: #753F1C;
+}
+input[type="checkbox"].orangeCheckbox:checked:hover{
+	background-color: #AA5C29;
+	border-color: #843D11;
+}
+input[type="checkbox"].orangeCheckbox::before {
+	content: "";
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 3px;
+	background-color: #565656;
+	position: absolute;
+	top: 50%;
+	left: 4px;
+	transform: translateY(-50%);
+	transition: background-color 0.2s ease, left 0.2s ease;
+}
+input[type="checkbox"].orangeCheckbox:hover::before{
+	background-color: #828282;
+}
+input[type="checkbox"].orangeCheckbox:checked::before {
+	background-color: #AA5C29;
+	position: absolute;
+	top: 50%;
+	left: calc(100% - 4px - 10px);
+	transform: translateY(-50%);
+}
+input[type="checkbox"].orangeCheckbox:checked:hover::before{
+	background-color: #843D11;
+}
+
+.orangePocket{
+	height: auto;
+	padding: 10px;
+	margin: 0 auto;
+	
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	
+	align-items: center;
+	
+	color: white;
+	background-color: #222;
+	border: 2px solid #565656;
+	border-radius: 10px;
+	
+	opacity: 0;
+	transform: translateX(-15px);
+	transition: background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+.orangePocket:hover{
+	background-color: #333;
+}
+.orangePocket.show{
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.orangeCard{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+	position: relative;
+
+    padding: 10px;
+	padding-top: 24px;
+	justify-content: center;
+	
+	color: white;
+    background: #222;
+    border: 2px solid #565656;
+    border-radius: 10px;
+	
+	opacity: 0;
+	transform: translateY(-15px);
+	transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.orangeCard.show{
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.expenseRow{
+    display: flex;
+	flex-direction: row;
+    gap: 10px;
+	justify-content: center;
+    align-items: center;
+}
+
+.expenseField{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.expenseParticipants{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+	justify-content: center;
+    align-items: center;
+}
+
+.expenseParticipant{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.deleteExpense{
+	position: absolute;
+	top: 10px;
+    right: 10px;
+
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#participants{
+	width: 90%;
+	margin: 0 auto;
+}
+
+#participantsGrid{
+    margin-top: 10px;
+	
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+	justify-content: center;
+    gap: 15px;
+	padding: 10px;
+	
+	max-height: 300px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#addParticipant{
+    min-height: 68px;
+    width: 250px;
+    max-width: 100%;
+	margin: 0 auto;
+
+    font-size: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#expenses{
+	width: 90%;
+	margin: 30px auto;
+}
+
+#addExpense{
+    min-height: 68px;
+    width: 250px;
+    max-width: 100%;
+	margin: 20px auto;
+
+    font-size: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#expensesList{	
+	justify-content: center;
+	padding: 15px;
+	
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	
+	overflow-x: hidden;
+}
+
+#balances{
+	width: 90%;
+	margin: 30px auto;
+}
