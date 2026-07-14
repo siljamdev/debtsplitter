@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		const input = document.createElement("input");
         input.type = "text";
         input.placeholder = "Name";
-        input.className = "orangeInput";
+        input.className = "orangeInput participantInput";
 		if(name !== undefined){
 			input.value = name;
 		}
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 		
 		const remove = document.createElement("button");
-        remove.className = "orangeSmallButton";
+        remove.className = "orangeSmallButton removeParticipant";
         remove.textContent = "✕";
 		
 		const participantObj = {name: name ?? ""};
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		amountLabel.textContent = "Amount";
 	
 		const amountInput = document.createElement("input");
-		amountInput.className = "orangeInput";
+		amountInput.className = "orangeInput amountInput";
 		amountInput.type = "number";
 		amountInput.step = "0.1";
 		amountInput.min = "0";
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function (){
 		paidByLabel.textContent = "Paid by";
 	
 		const paidBySelect = document.createElement("select");
-		paidBySelect.className = "orangeInput";
+		paidBySelect.className = "orangeInput paidBySelect";
 	
 		participants.forEach(p => {
 			const option = document.createElement("option");
